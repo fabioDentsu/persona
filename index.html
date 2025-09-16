@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Automotive - AI Concierge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+
+        /* Custom scrollbar for a more premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a4a4a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6a6a6a;
+        }
+
+        /* Frosted liquid glass effect */
+        .glass-effect {
+            background: rgba(15, 127, 178, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(146, 49, 205, 0.2);
+        }
+ h3{
+color: rgb(157, 0, 255);
+}
+        /* For the animated content blocks */
+        .info-block {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .info-block.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Subtle background gradient */
+        .main-bg {
+              /*background-image: radial-gradient(circle at 10% 20%, rgba(100, 116, 139, 0.1), transparent 30%),
+                              radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.1), transparent 30%); */
+        }
+
+        /* The main sticky container for the car animation */
+        .car-sticky-container {
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+        }
+
+        /* The scrollable area that drives the car animation */
+        .car-scroll-section {
+            height: 1000vh; /* More height = more scrolling to complete animation */
+            position: relative;
+        }
+
+        #animated-car {
+            will-change: transform; /* Performance optimization */
+        }
+    </style>
+</head>
+<body class="main-bg">
+
+    <!-- Sidebar Navigation -->
+     <div class="flex items-center gap-3 mb-12" style="margin-left: 48%; margin-top: 2em;">
+       
+            <h1 class="text-xl font-bold tracking-wider">PORSCHE</h1>
+        </div>
+    
+
+    <!-- Hamburger Menu for Mobile -->
+    <button id="menu-btn" class="md:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-black/50 backdrop-blur-sm">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+    </button>
+
+    <!-- Main Content -->
+    <main class="md:ml-64 transition-all duration-300 ease-in-out" style="margin-left: -0.5em;">
+        <!-- Section 1: AI Prompt -->
+ 
+
+        <!-- Section 2: Scroll-driven Animation -->
+        <section id="info-section" class="relative" >
+            <!-- Sticky container for the animated car -->
+            <div class="car-sticky-container" >
+                <div class="w-full h-full flex justify-center items-center">
+                    <img id="animated-car"
+     src="images/Test_Secuence-01/Secuence-001.jpg"
+     alt="Aura Concept Car"
+     class="h-full w-auto max-w-none object-contain"
+     width="1920" height="1080">
+                </div>
+            </div>
+
+            <!-- Scrollable content that triggers animations -->
+            <div class="car-scroll-section" >
+                <div class="relative w-full max-w-7xl mx-auto h-full p-8">
+
+                    <div class="info-block glass-effect p-8 rounded-3xl max-w-md absolute top-[0%] right-0">
+                        <h3 class="text-3xl font-bold mb-3">Unibody Frame</h3>
+                        <p class="text-gray-300">Forged from a single piece of aerospace-grade alloy, the chassis provides unparalleled rigidity and a responsive feel, translating every nuance of the road directly to the driver.</p>
+                    </div>
+
+                    <div class="info-block glass-effect p-8 rounded-3xl max-w-md absolute top-[5%] left-0">
+                        <h3 class="text-3xl font-bold mb-3">Quantum-Cell Battery</h3>
+                        <p class="text-gray-300">Our revolutionary power source offers a 1,200km range with a 10-minute charge time. Power is not just about speed, but freedom from compromise.</p>
+                    </div>
+
+                    <div class="info-block glass-effect p-8 rounded-3xl max-w-md absolute top-[10%] right-0">
+                        <h3 class="text-3xl font-bold mb-3">Aerodynamic Intelligence</h3>
+                        <p class="text-gray-300">Active surfaces adapt in real-time to driving conditions, minimizing drag and maximizing downforce for sublime stability at any velocity.</p>
+                    </div>
+                    <div class="info-block glass-effect p-8 rounded-3xl max-w-md absolute top-[15%] left-0">
+                        <h3 class="text-3xl font-bold mb-3">Quantum-Cell Battery</h3>
+                        <p class="text-gray-300">Our revolutionary power source offers a 1,200km range with a 10-minute charge time. Power is not just about speed, but freedom from compromise.</p>
+                    </div>
+
+                    <div class="info-block glass-effect p-8 rounded-3xl max-w-md absolute top-[20%] right-0">
+                        <h3 class="text-3xl font-bold mb-3">Aerodynamic Intelligence</h3>
+                        <p class="text-gray-300">Active surfaces adapt in real-time to driving conditions, minimizing drag and maximizing downforce for sublime stability at any velocity.</p>
+                    </div>
+                          <div class="info-block glass-effect p-8 rounded-3xl max-w-md absolute top-[25%] left-0">
+                        <h3 class="text-3xl font-bold mb-3">Quantum-Cell Battery</h3>
+                        <p class="text-gray-300">Our revolutionary power source offers a 1,200km range with a 10-minute charge time. Power is not just about speed, but freedom from compromise.</p>
+                    </div>
+
+                    <div class="info-block glass-effect p-8 rounded-3xl max-w-md absolute top-[30%] right-0">
+                        <h3 class="text-3xl font-bold mb-3">Aerodynamic Intelligence</h3>
+                        <p class="text-gray-300">Active surfaces adapt in real-time to driving conditions, minimizing drag and maximizing downforce for sublime stability at any velocity.</p>
+                    </div>
+                      
+                          <div class="info-block glass-effect p-8 rounded-3xl max-w-md absolute top-[35%] left-0">
+                        <h3 class="text-3xl font-bold mb-3">Quantum-Cell Battery</h3>
+                        <p class="text-gray-300">Our revolutionary power source offers a 1,200km range with a 10-minute charge time. Power is not just about speed, but freedom from compromise.</p>
+                    </div>
+                         <div class="info-block glass-effect p-1 rounded-3xl max-w-md absolute top-[50%] text-center" style="margin-left: 30%;">
+                        <h3 class="text-3xl font-bold mb-3">Talk now</h3>
+                        <p class="text-gray-300">Active surfaces adapt in real-time to driving conditions, minimizing drag and maximizing downforce for sublime stability at any velocity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Final Call to Action -->
+        <section class="h-screen flex flex-col justify-center items-center text-center p-4">
+            <h2 class="text-5xl md:text-7xl font-black mb-4">Talk to our Persona</h2>
+            <p class="text-lg text-gray-400 max-w-2xl mb-12">The future of automotive luxury is not coming. It has arrived. Schedule a private viewing or continue your design journey with our AI Concierge.</p>
+            <button class="bg-white text-black font-bold text-lg py-4 px-10 rounded-full hover:bg-gray-200 transition-colors">Ask a question now</button>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Sidebar Mobile Toggle ---
+            const sidebar = document.getElementById('sidebar');
+            const menuBtn = document.getElementById('menu-btn');
+
+            menuBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+            });
+
+            // --- Info Blocks Intersection Observer ---
+            const infoBlocks = document.querySelectorAll('.info-block');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+
+            infoBlocks.forEach(block => {
+                observer.observe(block);
+            });
+
+            });
+    </script>
+
+<script>
+(() => {
+  // === Scroll-driven image sequence for #animated-car ===
+  const FRAME_COUNT = 179;                // TODO: set this to your total frames
+  const PAD = 3;                          // "001" format; adjust if needed
+  const PATH = "images/Test_Secuence-01"; // where you will place the frames
+  const BASENAME = "Secuence-";           // frame name prefix
+  const EXT = ".jpg";                     // file extension
+
+  const srcFor = i => `${PATH}/${BASENAME}${String(i).padStart(PAD,'0')}${EXT}`;
+
+  const car = document.getElementById('animated-car');
+  const section = document.getElementById('info-section') || document.body;
+
+  // Preload a few frames for instant response
+  const cache = new Array(FRAME_COUNT + 1);
+  function preload(i){
+    if (i < 1 || i > FRAME_COUNT || cache[i]) return;
+    const img = new Image();
+    img.src = srcFor(i);
+    cache[i] = img;
+  }
+  for (let i = 1; i <= Math.min(10, FRAME_COUNT); i++) preload(i);
+  (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(() => {
+    for (let i = 11; i <= FRAME_COUNT; i++) preload(i);
+  });
+
+  function getProgressIn(el){
+    const r = el.getBoundingClientRect();
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    const total = r.height + vh;
+    const passed = Math.min(Math.max(vh - r.top, 0), total);
+    return total ? passed / total : 0;
+  }
+
+  let lastFrame = 1, ticking = false;
+  function render(){
+    const p = section ? getProgressIn(section) : (window.scrollY / (document.body.scrollHeight - innerHeight));
+    const frame = Math.max(1, Math.min(FRAME_COUNT, Math.round(p * (FRAME_COUNT - 1)) + 1));
+    if (frame !== lastFrame) {
+      car.src = srcFor(frame);
+      preload(frame + 1);
+      preload(frame + 2);
+      lastFrame = frame;
+    }
+  }
+  function onScroll(){
+    if (!ticking) {
+      requestAnimationFrame(() => { render(); ticking = false; });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+onScroll();
+})();
+</script>
+
+</body>
+</html>
